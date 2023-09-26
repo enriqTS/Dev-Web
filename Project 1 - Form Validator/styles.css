@@ -78,7 +78,7 @@ h2 {
     visibility: hidden;
 }
 
-.form-contro.error small {
+.form-control.error small {
     visibility: visible;
 }
 
