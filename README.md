@@ -1,2 +1,2 @@
-# Udemy-Vanilla-JS-Course
+# Vanilla-JS
  Just some simple code following a Udemy couse
