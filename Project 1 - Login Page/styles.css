@@ -34,6 +34,21 @@ body {
     border: 2px solid #410b82;
 }
 
+.register-changer button{
+    color: #fff;
+    text: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    background-color: #410b82;
+    border: 2px solid #410b82;
+}
+
+
 .login-changer button:hover{
     opacity: 90%;
 }
