@@ -45,7 +45,6 @@ function checkRequired(inputArr) {
   return isRequired;
 }
 
-// Check input length
 function checkLength(input, min, max) {
   if (input.value.length < min) {
     showError(
