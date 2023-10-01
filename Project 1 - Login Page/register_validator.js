@@ -1,3 +1,4 @@
+const passwordControl = document.getElementById("passwordControl");
 const form = document.getElementById("form");
 const username = document.getElementById("usuário");
 const email = document.getElementById("email");
@@ -115,8 +116,8 @@ function Strength(password) {
   return i;
 }
 
-let container = document.querySelector(".password-control");
-document.addEventListener("keyup", function (e) {
+let container = document.querySelector(".passwordControl");
+passwordControl.addEventListener("keyup", function () {
   let password = document.querySelector("#senha").value;
 
   let strength = Strength(password);

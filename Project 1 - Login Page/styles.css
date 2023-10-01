@@ -102,19 +102,19 @@ h2 {
   visibility: visible;
 }
 
-.password-control {
+.passwordControl {
     margin-bottom: 10px;
     padding-bottom: 20px;
     position: relative;
   }
   
-.password-control label {
+.passwordControl label {
     color: #fff;
     display: block;
     margin-bottom: 5px;
   }
   
-.password-control input {
+.passwordControl input {
     border: 2px solid #2e2e2e;
     border-radius: 4px;
     display: block;
@@ -125,25 +125,25 @@ h2 {
     position: relative;
   }
   
-.password-control input:focus {
+.passwordControl input:focus {
     outline: 0;
     border-color: #777;
   }
   
-.password-control .passwordInput input:focus {
+.passwordControl .passwordInput input:focus {
     outline: 0;
     border-color: #777;
   }
   
-.password-control.success input {
+.passwordControl.success input {
     border-color: var(--success-color);
   }
   
-.password-control.error input {
+.passwordControl.error input {
     border-color: var(--error-color);
   }
   
-.password-control small {
+.passwordControl small {
     color: var(--error-color);
     position: absolute;
     bottom: 0;
@@ -151,7 +151,7 @@ h2 {
     visibility: hidden;
   }
   
-.password-control.error small {
+.passwordControl.error small {
     visibility: visible;
   }
 
@@ -172,12 +172,12 @@ h2 {
   opacity: 90%;
 }
 
-.password-control .passwordInput {
+.passwordControl .passwordInput {
   position: relative;
   width: 100%;
 }
 
-.password-control .passwordInput input {
+.passwordControl .passwordInput input {
   position: relative;
   width: 100%;
   background: #2e2e2e;
@@ -186,7 +186,7 @@ h2 {
   padding: 10px;
 }
 
-.password-control .strengthMeter {
+.passwordControl .strengthMeter {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -195,31 +195,30 @@ h2 {
   background: #222;
 }
 
-.password-control .strengthMeter::before {
+.passwordControl .strengthMeter::before {
   content: "";
   position: absolute;
   width: 0;
   height: 100%;
   transition: 0.5s;
-  background: #f00;
 }
 
-.password-control.weak .strengthMeter::before {
+.passwordControl.weak .strengthMeter::before {
   width: 10%;
   background: #f00;
 }
 
-.password-control.moderate .strengthMeter::before {
+.passwordControl.moderate .strengthMeter::before {
   width: 70%;
   background: #eedc3d;
 }
 
-.password-control.strong .strengthMeter::before {
+.passwordControl.strong .strengthMeter::before {
   width: 100%;
   background: #18e605;
 }
 
-.password-control .strengthMeter::after {
+.passwordControl .strengthMeter::after {
   position: absolute;
   top: -45px;
   left: 30px;
@@ -227,17 +226,17 @@ h2 {
   color: aliceblue;
 }
 
-.password-control.password-control.weak .strengthMeter::after {
+.passwordControl.weak .strengthMeter::after {
   content: "";
   color: #f00;
 }
 
-.password-control.password-control.password-control.moderate .strengthMeter::after {
+.passwordControl.moderate .strengthMeter::after {
   content: "";
   color: #eedc3d;
 }
 
-.password-control.password-control.password-control.password-control.strong .strengthMeter::after {
+.passwordControl.strong .strengthMeter::after {
   content: "";
   color: #18e605;
 }
