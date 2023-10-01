@@ -172,6 +172,10 @@ h2 {
   opacity: 90%;
 }
 
+.form button:active {
+    transform: scale(0.95);
+  }
+
 .passwordControl .passwordInput {
   position: relative;
   width: 100%;
@@ -226,17 +230,13 @@ h2 {
   color: aliceblue;
 }
 
-.passwordControl.weak .strengthMeter::after {
-  content: "";
-  color: #f00;
-}
-
-.passwordControl.moderate .strengthMeter::after {
-  content: "";
-  color: #eedc3d;
-}
-
-.passwordControl.strong .strengthMeter::after {
-  content: "";
-  color: #18e605;
-}
+.passwordInput .show-hide {
+    position: absolute;
+    right: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #919191;
+    cursor: pointer;
+    padding: 3px;
+  }
