@@ -70,17 +70,13 @@ function checkPasswordsMatch(input1, input2) {
 
 // Get fieldname
 function getFieldName(input) {
-  if(input.id === "senha2"){
-    return "Senha"
+  if (input.id === "senha2") {
+    return "Senha";
   }
   return input.id.charAt(0).toUpperCase() + input.id.slice(1);
 }
 
-function redirect(){
-  window.location.href = "./login.html";
-}
-
-// Event listeners
+// Validating information upon submition
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -91,6 +87,50 @@ form.addEventListener("submit", function (e) {
     checkEmail(email)),
     checkPasswordsMatch(password, password2))
   ) {
-    redirect();
+  }
+});
+
+//Checking password Strength
+function Strength(password) {
+  let i = 0;
+  if (password.length > 6) {
+    i++;
+  }
+  if (password.length >= 10) {
+    i++;
+  }
+
+  if (/[A-Z]/.test(password)) {
+    i++;
+  }
+
+  if (/[0-9]/.test(password)) {
+    i++;
+  }
+
+  if (/[A-Za-z0-8]/.test(password)) {
+    i++;
+  }
+
+  return i;
+}
+
+let container = document.querySelector(".password-control");
+document.addEventListener("keyup", function (e) {
+  let password = document.querySelector("#senha").value;
+
+  let strength = Strength(password);
+  if (strength <= 2) {
+    container.classList.add("weak");
+    container.classList.remove("moderate");
+    container.classList.remove("strong");
+  } else if (strength >= 2 && strength <= 4) {
+    container.classList.remove("weak");
+    container.classList.add("moderate");
+    container.classList.remove("strong");
+  } else {
+    container.classList.remove("weak");
+    container.classList.remove("moderate");
+    container.classList.add("strong");
   }
 });
