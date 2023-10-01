@@ -20,6 +20,8 @@ body {
     margin: 0;
 }
 
+
+
 .login-changer button{
     color: #fff;
     text: center;
@@ -58,6 +60,19 @@ body {
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     width: 400px;
+}
+
+.minor-text {
+    text-align: center;
+    color: #555456
+}
+
+.refer {
+    color: #3e3e9e
+}
+
+.refer:hover {
+    opacity: 90%;
 }
 
 h2 {
