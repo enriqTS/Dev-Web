@@ -1,8 +1,8 @@
 const form = document.getElementById("form");
-const username = document.getElementById("username");
+const username = document.getElementById("usuário");
 const email = document.getElementById("email");
-const password = document.getElementById("password");
-const password2 = document.getElementById("password2");
+const password = document.getElementById("senha");
+const password2 = document.getElementById("senha2");
 
 // Show input error message
 function showError(input, message) {
@@ -25,7 +25,7 @@ function checkEmail(input) {
   if (re.test(input.value.trim())) {
     showSuccess(input);
   } else {
-    showError(input, "Email is not valid");
+    showError(input, "Email não é válido");
   }
 }
 
@@ -34,7 +34,7 @@ function checkRequired(inputArr) {
   let isRequired = false;
   inputArr.forEach(function (input) {
     if (input.value.trim() === "") {
-      showError(input, `${getFieldName(input)} is required`);
+      showError(input, `${getFieldName(input)} é necessário`);
       isRequired = true;
     } else {
       showSuccess(input);
@@ -49,12 +49,12 @@ function checkLength(input, min, max) {
   if (input.value.length < min) {
     showError(
       input,
-      `${getFieldName(input)} must be at least ${min} characters`
+      `${getFieldName(input)} tem que ter pelo menos ${min} characteres`
     );
   } else if (input.value.length > max) {
     showError(
       input,
-      `${getFieldName(input)} must be less than ${max} characters`
+      `${getFieldName(input)} tem que ter menos de ${max} characteres`
     );
   } else {
     showSuccess(input);
@@ -64,12 +64,15 @@ function checkLength(input, min, max) {
 // Check passwords match
 function checkPasswordsMatch(input1, input2) {
   if (input1.value != input2.value) {
-    showError(input2, "Passwords do not match");
+    showError(input2, "As senhas não são iguais");
   }
 }
 
 // Get fieldname
 function getFieldName(input) {
+  if(input.id === "senha2"){
+    return "Senha"
+  }
   return input.id.charAt(0).toUpperCase() + input.id.slice(1);
 }
 
