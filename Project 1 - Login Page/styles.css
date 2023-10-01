@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 :root {
   --success-color: #2ecc71;
@@ -11,7 +12,7 @@
 
 body {
   background-color: #1f1f20;
-  font-family: "Open sans", sans-serif;
+  font-family: "Poppins", "Open Sans", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,57 +104,57 @@ h2 {
 }
 
 .passwordControl {
-    margin-bottom: 10px;
-    padding-bottom: 20px;
-    position: relative;
-  }
-  
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
 .passwordControl label {
-    color: #fff;
-    display: block;
-    margin-bottom: 5px;
-  }
-  
+  color: #fff;
+  display: block;
+  margin-bottom: 5px;
+}
+
 .passwordControl input {
-    border: 2px solid #2e2e2e;
-    border-radius: 4px;
-    display: block;
-    width: 100%;
-    padding: 10px;
-    font-size: 14px;
-    background-color: #2e2e2e;
-    position: relative;
-  }
-  
+  border: 2px solid #2e2e2e;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  background-color: #2e2e2e;
+  position: relative;
+}
+
 .passwordControl input:focus {
-    outline: 0;
-    border-color: #777;
-  }
-  
+  outline: 0;
+  border-color: #777;
+}
+
 .passwordControl .passwordInput input:focus {
-    outline: 0;
-    border-color: #777;
-  }
-  
+  outline: 0;
+  border-color: #777;
+}
+
 .passwordControl.success input {
-    border-color: var(--success-color);
-  }
-  
+  border-color: var(--success-color);
+}
+
 .passwordControl.error input {
-    border-color: var(--error-color);
-  }
-  
+  border-color: var(--error-color);
+}
+
 .passwordControl small {
-    color: var(--error-color);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    visibility: hidden;
-  }
-  
+  color: var(--error-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
 .passwordControl.error small {
-    visibility: visible;
-  }
+  visibility: visible;
+}
 
 .form button {
   cursor: pointer;
@@ -173,8 +174,8 @@ h2 {
 }
 
 .form button:active {
-    transform: scale(0.95);
-  }
+  transform: scale(0.95);
+}
 
 .passwordControl .passwordInput {
   position: relative;
@@ -229,14 +230,3 @@ h2 {
   transition: 0.5s;
   color: aliceblue;
 }
-
-.passwordInput .show-hide {
-    position: absolute;
-    right: 13px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 18px;
-    color: #919191;
-    cursor: pointer;
-    padding: 3px;
-  }

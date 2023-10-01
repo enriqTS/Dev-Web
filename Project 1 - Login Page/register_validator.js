@@ -72,7 +72,7 @@ function checkPasswordsMatch(input1, input2) {
 // Get fieldname
 function getFieldName(input) {
   if (input.id === "senha2") {
-    return "Senha";
+    return "Confirmar sua senha";
   }
   return input.id.charAt(0).toUpperCase() + input.id.slice(1);
 }
@@ -134,18 +134,4 @@ passwordControl.addEventListener("keyup", function () {
     container.classList.remove("moderate");
     container.classList.add("strong");
   }
-});
-
-const eyeIcons = document.querySelectorAll(".show-hide");
-
-eyeIcons.forEach((eyeIcon) => {
-  eyeIcon.addEventListener("click", () => {
-    const pInput = eyeIcon.parentElement.querySelector("input");
-    if (pInput.type === "password") {
-      eyeIcon.classList.replace("bx-hide", "bx-show");
-      return (pInput.type = "text");
-    }
-    eyeIcon.classList.replace("bx-show", "bx-hide");
-    pInput.type = "password";
-  });
 });
